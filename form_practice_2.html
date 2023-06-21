@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        
+    <form action="./result.html" method="get">
+        <fieldset>
+            <legend>기숙사 메뉴 신청서 양식</legend>
+            <div>
+                <label for="username">학과:</label>
+                <input type="text" name="student_major" placeholder="student_major" autocomplete="on" required>
+            </div>
+            <div>
+                <label for="username">학번:</label>
+                <input type="number" name="student_number" placeholder="Student Number" autocomplete="on" required>
+            </div>
+            <div>
+                <label for="password">비밀번호:</label>
+                <input type="number" name="password_seonggi_lee" placeholder="Password" autocomplete="on" required>
+            </div>
+            <div >
+                <label for="age">나이:</label>
+                <input type="number" name="age" min="0" max="100" step="10" autocomplete="off">
+            </div>
+            <label for="summary">신청 음식과 이유:</label>
+                <div>
+                <textarea name="summary" rows="10" cols="30" placeholder="내용입력"></textarea>
+                </div>
+            <div>
+                <select name="type">
+                    <option value="T_AS_1">아침</option>
+                    <option value="T_AS_1">점심</option>
+                    <option value="T_AS_1">저녁</option>
+                </select>
+            <div>                    
+                <input type="checkbox" name="type_2_1" value="1perweek">
+                <label for="type_2_1">주1회</label>
+                <input type="checkbox" name="type_2_2" value="2perweek">
+                <label for="type_2_2">주2회</label>
+                <input type="checkbox" name="type_2_3" value="3perweek">
+                <label for="type_2_3">주3회</label>
+            </div>
+            <div>
+                <input type="radio" name="type_3" value="emergency">
+                <label for="type_3_1">긴급</label>
+                <input type="radio" name="type_3" value="emergency" checked>
+                <label for="type_3_1">일반</label>
+            </div>
+            <div>
+                <button type="submit">제출</button>
+            </div>
+        </fieldset>
+
+</body>
+</html>

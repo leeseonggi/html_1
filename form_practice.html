@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--
+    디렉토리 경로
+    ./현재 디렉토리
+    /root directory
+    /result.html 최상단 디렉토리는?
+    작업중인 디렉토리(working directory) html 폴더
+    vscode -> 열어놓은 폴더 -> 작업중인 디렉토리
+
+    ../ 상위 디렉토리(폴더)
+
+    -->
+    <form action="./result.html" method="get">
+        <!--get으로 보내면은 쿼리 정보가 다 드러남(파일도 하나의 서버)-->
+        <fieldset>
+            <legend>A/S 제출 양식</legend>
+            <div>
+                <label for="username">아이디:</label>
+                <input type="text" name="username" placeholder="ID" autocomplete="on" required>
+            </div> 
+            <div>
+                <label for="password">비밀번호:</label>
+                <input type="number" name="password_seonggi_lee" placeholder="PWD" autocomplete="on" required>
+            </div>
+            <div >
+                <label for="age">나이:</label>
+                <input type="number" name="age" min="0" max="100" step="10" autocomplete="off">
+            </div>
+            <label for="summary">내용:</label>
+            <div>
+            <textarea name="summary" rows="10" cols="30" placeholder="내용입력"></textarea>
+            </div>
+            <div>
+                <select name="type">
+                    <option value="T_AS_1">환불</option>
+                    <option value="T_AS_1">고장신고</option>
+                    <option value="T_AS_1">기타</option>
+                </select>
+            </div>
+            <div>
+                <!--일반적으로 여러개 선택 [name통일시킨다고 하나만 되지는 않음]-->
+                <input type="checkbox" name="type_2_1" value="1day">
+                <label for="type_2_1">1일 이내</label>
+                <input type="checkbox" name="type_2_2" value="1week">
+                <label for="type_2_2">1주 이내</label>
+                <input type="checkbox" name="type_2_3" value="1month">
+                <label for="type_2_3">1개월 이내</label>
+            </div>
+            <div>
+                <!--일반적으로 하나만 선택할때 [name을 통일시켜야 하나만 선택가능]-->
+                <input type="radio" name="type_3" value="emergency">
+                <label for="type_3_1">긴급</label>
+                <input type="radio" name="type_3" value="emergency" checked>
+                <label for="type_3_1">일반</label>
+            </div>
+            <div>
+                <button type="submit">제출</button>
+            </div>
+        </fieldset>
+    </form>
+
+</body>
+</html>
